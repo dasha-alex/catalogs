@@ -4,6 +4,9 @@
 #include <vector>
 #include <algorithm>
 #include <iterator>
+#include <map>
+#include <set>s
+
 
 namespace fs = std::filesystem;
 
@@ -107,8 +110,8 @@ public:
                 onlyInDir2.push_back(path);
             }
             else if (inDir1 && inDir2) {
-                const FileInfo& info1 = files1[path];
-                const FileInfo& info2 = files2[path];
+                const Directory& info1 = files1[path];
+                const Directory& info2 = files2[path];
 
                 if (!(info1 == info2)) {
                     std::string differences;
